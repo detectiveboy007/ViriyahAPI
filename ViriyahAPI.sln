@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViriyahAPI", "ViriyahAPI\ViriyahAPI.csproj", "{D32461BE-A982-4D9F-BB54-36366B91212D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D32461BE-A982-4D9F-BB54-36366B91212D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D32461BE-A982-4D9F-BB54-36366B91212D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D32461BE-A982-4D9F-BB54-36366B91212D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D32461BE-A982-4D9F-BB54-36366B91212D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {97183B99-9EA8-4A8A-A6C7-AA0F12C59FC6}
+	EndGlobalSection
+EndGlobal
