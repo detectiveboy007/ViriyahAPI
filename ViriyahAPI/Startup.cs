@@ -14,6 +14,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using ViriyahAPI.Configurations;
 using ViriyahAPI.Data;
+using ViriyahAPI.IRepository;
+using ViriyahAPI.Repository;
 
 namespace ViriyahAPI
 {
@@ -44,12 +46,22 @@ namespace ViriyahAPI
             });
 
             services.AddAutoMapper(typeof(MapperInitilizer));
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
 
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ViriyahAPI", Version = "v1" });
             });
-            services.AddControllers();
+            //services.AddControllers();
+            services.AddControllers(config => {
+                config.CacheProfiles.Add("120SecondsDuration", new CacheProfile
+                {
+                    Duration = 120
+
+                });
+            }).AddNewtonsoftJson(op =>
+            op.SerializerSettings.ReferenceLoopHandling =
+                Newtonsoft.Json.ReferenceLoopHandling.Ignore);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

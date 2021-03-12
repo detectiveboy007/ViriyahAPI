@@ -1,0 +1,58 @@
+2021-03-09 20:56:56.665 +07:00 [INF] Application Is Starting
+2021-03-09 20:57:28.069 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-03-09 20:57:28.240 +07:00 [INF] Hosting environment: Development
+2021-03-09 20:57:28.253 +07:00 [INF] Content root path: D:\taun\Viriyah\Project\WebAPI\ViriyahAPI\ViriyahAPI
+2021-03-09 20:57:28.472 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - -
+2021-03-09 20:57:29.370 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - - - 200 - text/html;charset=utf-8 899.8855ms
+2021-03-09 20:57:29.854 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/swagger-ui.css - -
+2021-03-09 20:57:29.855 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/swagger-ui-standalone-preset.js - -
+2021-03-09 20:57:31.227 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-03-09 20:57:31.227 +07:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-03-09 20:57:31.227 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/swagger-ui.css - - - 0 142933 text/css 1373.3745ms
+2021-03-09 20:57:31.227 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/swagger-ui-standalone-preset.js - - - 0 311804 application/javascript 1372.2075ms
+2021-03-09 20:57:31.406 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/favicon-16x16.png - -
+2021-03-09 20:57:31.502 +07:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2021-03-09 20:57:31.503 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/favicon-16x16.png - - - 0 665 image/png 96.8619ms
+2021-03-09 20:57:32.842 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - -
+2021-03-09 20:57:33.418 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 575.6503ms
+2021-03-09 21:18:33.034 +07:00 [INF] Application Is Starting
+2021-03-09 21:18:43.216 +07:00 [INF] Now listening on: https://localhost:5001
+2021-03-09 21:18:43.219 +07:00 [INF] Now listening on: http://localhost:5000
+2021-03-09 21:18:43.219 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-03-09 21:18:43.219 +07:00 [INF] Hosting environment: Development
+2021-03-09 21:18:43.220 +07:00 [INF] Content root path: D:\taun\Viriyah\Project\WebAPI\ViriyahAPI\ViriyahAPI
+2021-03-09 21:18:58.232 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger - -
+2021-03-09 21:18:58.486 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-03-09 21:18:58.661 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger - - - 301 0 - 291.9789ms
+2021-03-09 21:18:59.098 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 612.1719ms
+2021-03-09 21:18:59.190 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - -
+2021-03-09 21:18:59.190 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - -
+2021-03-09 21:18:59.190 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - -
+2021-03-09 21:18:59.834 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-03-09 21:18:59.838 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - - - 200 142933 text/css 647.1948ms
+2021-03-09 21:18:59.988 +07:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-03-09 21:18:59.988 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - - - 200 311804 application/javascript 810.4463ms
+2021-03-09 21:19:00.263 +07:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-03-09 21:19:00.263 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - - - 200 986342 application/javascript 1072.6114ms
+2021-03-09 21:19:00.445 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/favicon-16x16.png - -
+2021-03-09 21:19:00.504 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-03-09 21:19:00.538 +07:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2021-03-09 21:19:00.538 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/favicon-16x16.png - - - 200 665 image/png 93.1009ms
+2021-03-09 21:19:01.012 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 508.0028ms
+2021-03-09 23:30:01.370 +07:00 [INF] Application Is Starting
+2021-03-09 23:30:15.135 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-03-09 23:30:15.165 +07:00 [INF] Hosting environment: Development
+2021-03-09 23:30:15.167 +07:00 [INF] Content root path: D:\taun\Viriyah\Project\WebAPI\ViriyahAPI\ViriyahAPI
+2021-03-09 23:30:15.664 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - -
+2021-03-09 23:30:16.077 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - - - 200 - text/html;charset=utf-8 415.4299ms
+2021-03-09 23:30:16.146 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/swagger-ui.css - -
+2021-03-09 23:30:16.146 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/swagger-ui-standalone-preset.js - -
+2021-03-09 23:30:16.591 +07:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-03-09 23:30:16.591 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-03-09 23:30:16.591 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/swagger-ui.css - - - 0 142933 text/css 445.1928ms
+2021-03-09 23:30:16.591 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/swagger-ui-standalone-preset.js - - - 0 311804 application/javascript 445.1092ms
+2021-03-09 23:30:16.717 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/favicon-16x16.png - -
+2021-03-09 23:30:16.758 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - -
+2021-03-09 23:30:16.848 +07:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2021-03-09 23:30:17.087 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/favicon-16x16.png - - - 200 665 image/png 369.1427ms
+2021-03-09 23:30:17.176 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 417.6542ms
