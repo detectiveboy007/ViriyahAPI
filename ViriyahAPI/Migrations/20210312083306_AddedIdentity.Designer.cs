@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ViriyahAPI.Data;
 
 namespace ViriyahAPI.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    partial class DatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20210312083306_AddedIdentity")]
+    partial class AddedIdentity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -44,22 +46,6 @@ namespace ViriyahAPI.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = "14df19d9-cda8-4ae8-88f1-6a319bd09d6c",
-                            ConcurrencyStamp = "e00b7fc6-22c0-453e-8fcd-c607294ae76e",
-                            Name = "User",
-                            NormalizedName = "USER"
-                        },
-                        new
-                        {
-                            Id = "1b0cb588-b5c2-4dcd-87b0-c968922289c8",
-                            ConcurrencyStamp = "3479e5bb-872b-4e99-aff6-38ff24b14c72",
-                            Name = "Administrator",
-                            NormalizedName = "ADMINISTRATOR"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -258,20 +244,20 @@ namespace ViriyahAPI.Migrations
                         new
                         {
                             Id = 1,
-                            Name = "Jamaica",
-                            ShortName = "JM"
+                            Name = "taunthong",
+                            ShortName = "TK"
                         },
                         new
                         {
                             Id = 2,
-                            Name = "Bahamas",
-                            ShortName = "BS"
+                            Name = "taunthong2",
+                            ShortName = "TK2"
                         },
                         new
                         {
                             Id = 3,
-                            Name = "Cayman Island",
-                            ShortName = "CI"
+                            Name = "taunthong3",
+                            ShortName = "TK3"
                         });
                 });
 
@@ -304,26 +290,26 @@ namespace ViriyahAPI.Migrations
                         new
                         {
                             Id = 1,
-                            Address = "Negril",
+                            Address = "TK",
                             CountryId = 1,
-                            Name = "Sandals Resort and Spa",
-                            Rating = 4.5
+                            Name = "taunthong",
+                            Rating = 1.2
                         },
                         new
                         {
                             Id = 2,
-                            Address = "George Town",
-                            CountryId = 3,
-                            Name = "Comfort Suites",
-                            Rating = 4.2999999999999998
+                            Address = "TK2",
+                            CountryId = 2,
+                            Name = "taunthong2",
+                            Rating = 2.2000000000000002
                         },
                         new
                         {
                             Id = 3,
-                            Address = "Nassua",
-                            CountryId = 2,
-                            Name = "Grand Palldium",
-                            Rating = 4.0
+                            Address = "TK3",
+                            CountryId = 3,
+                            Name = "taunthong3",
+                            Rating = 3.2000000000000002
                         });
                 });
 

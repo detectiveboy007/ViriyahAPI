@@ -1,0 +1,779 @@
+2021-03-13 21:30:19.619 +07:00 [INF] Application Is Starting
+2021-03-13 21:30:36.547 +07:00 [INF] User profile is available. Using 'C:\Users\Detectiveboy007\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-03-13 21:30:39.202 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-03-13 21:30:39.202 +07:00 [INF] Hosting environment: Development
+2021-03-13 21:30:39.202 +07:00 [INF] Content root path: D:\taun\Viriyah\Project\WebAPI\ViriyahAPI\ViriyahAPI
+2021-03-13 21:30:39.724 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - -
+2021-03-13 21:30:40.485 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - - - 200 - text/html;charset=utf-8 779.2397ms
+2021-03-13 21:30:41.655 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/swagger-ui.css - -
+2021-03-13 21:30:42.491 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-03-13 21:30:42.491 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/swagger-ui.css - - - 0 142933 text/css 836.4370ms
+2021-03-13 21:30:42.896 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/favicon-16x16.png - -
+2021-03-13 21:30:42.908 +07:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2021-03-13 21:30:42.918 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/favicon-16x16.png - - - 200 665 image/png 23.1525ms
+2021-03-13 21:30:43.636 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - -
+2021-03-13 21:30:44.925 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 1289.4716ms
+2021-03-13 21:36:38.613 +07:00 [INF] Request starting HTTP/2 POST https://localhost:44331/api/Account/register application/json-patch+json 135
+2021-03-13 21:36:38.627 +07:00 [INF] CORS policy execution successful.
+2021-03-13 21:36:38.794 +07:00 [INF] Executing endpoint 'ViriyahAPI.Controllers.AccountController.Register (ViriyahAPI)'
+2021-03-13 21:36:39.071 +07:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(ViriyahAPI.Models.UserDTO) on controller ViriyahAPI.Controllers.AccountController (ViriyahAPI).
+2021-03-13 21:36:41.253 +07:00 [INF] Executing action method ViriyahAPI.Controllers.AccountController.Register (ViriyahAPI) - Validation state: "Valid"
+2021-03-13 21:36:41.318 +07:00 [INF] Registration Attempt for taun@example.com 
+2021-03-13 21:36:43.394 +07:00 [INF] Entity Framework Core 5.0.4 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-03-13 21:36:46.266 +07:00 [INF] Executed DbCommand (230ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2021-03-13 21:36:46.333 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2021-03-13 21:36:46.673 +07:00 [INF] Executed DbCommand (53ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTimeOffset), @p9='?' (Size = 256), @p10='?' (Size = 256), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);
+2021-03-13 21:36:46.796 +07:00 [INF] Executed DbCommand (55ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2021-03-13 21:36:46.846 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE ([a].[UserId] = @__p_0) AND ([a].[RoleId] = @__p_1)
+2021-03-13 21:36:46.854 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2021-03-13 21:36:46.876 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2021-03-13 21:36:46.893 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2021-03-13 21:36:46.926 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+2021-03-13 21:36:47.069 +07:00 [INF] Executed DbCommand (132ms) [Parameters=[@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+SELECT @@ROWCOUNT;
+2021-03-13 21:36:47.090 +07:00 [INF] Executed action method ViriyahAPI.Controllers.AccountController.Register (ViriyahAPI), returned result Microsoft.AspNetCore.Mvc.AcceptedResult in 5829.8504ms.
+2021-03-13 21:36:47.098 +07:00 [INF] Executing AcceptedResult, writing value of type 'null'.
+2021-03-13 21:36:47.104 +07:00 [INF] Executed action ViriyahAPI.Controllers.AccountController.Register (ViriyahAPI) in 8027.1778ms
+2021-03-13 21:36:47.105 +07:00 [INF] Executed endpoint 'ViriyahAPI.Controllers.AccountController.Register (ViriyahAPI)'
+2021-03-13 21:36:47.115 +07:00 [INF] Request finished HTTP/2 POST https://localhost:44331/api/Account/register application/json-patch+json 135 - 202 0 - 8502.0606ms
+2021-03-13 22:38:15.544 +07:00 [INF] Application Is Starting
+2021-03-13 22:38:35.207 +07:00 [INF] User profile is available. Using 'C:\Users\Detectiveboy007\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-03-13 22:38:37.321 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-03-13 22:38:37.321 +07:00 [INF] Hosting environment: Development
+2021-03-13 22:38:37.321 +07:00 [INF] Content root path: D:\taun\Viriyah\Project\WebAPI\ViriyahAPI\ViriyahAPI
+2021-03-13 22:38:37.745 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - -
+2021-03-13 22:38:38.416 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - - - 200 - text/html;charset=utf-8 688.7474ms
+2021-03-13 22:38:39.143 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/favicon-16x16.png - -
+2021-03-13 22:38:39.294 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - -
+2021-03-13 22:38:39.647 +07:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2021-03-13 22:38:39.648 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/favicon-16x16.png - - - 0 665 image/png 504.6012ms
+2021-03-13 22:38:39.861 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 567.9061ms
+2021-03-13 22:53:11.854 +07:00 [INF] Application Is Starting
+2021-03-13 22:53:14.294 +07:00 [INF] User profile is available. Using 'C:\Users\Detectiveboy007\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-03-13 22:53:14.674 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-03-13 22:53:14.674 +07:00 [INF] Hosting environment: Development
+2021-03-13 22:53:14.674 +07:00 [INF] Content root path: D:\taun\Viriyah\Project\WebAPI\ViriyahAPI\ViriyahAPI
+2021-03-13 22:53:14.765 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - -
+2021-03-13 22:53:14.951 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - - - 200 - text/html;charset=utf-8 187.6712ms
+2021-03-13 22:53:15.023 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/swagger-ui.css - -
+2021-03-13 22:53:15.145 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-03-13 22:53:15.146 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/swagger-ui.css - - - 0 142933 text/css 122.7276ms
+2021-03-13 22:53:15.606 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/favicon-16x16.png - -
+2021-03-13 22:53:15.658 +07:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2021-03-13 22:53:15.658 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/favicon-16x16.png - - - 0 665 image/png 53.7222ms
+2021-03-13 22:53:15.837 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - -
+2021-03-13 22:53:16.005 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 167.0838ms
+2021-03-13 22:57:26.287 +07:00 [INF] Request starting HTTP/2 POST https://localhost:44331/api/Account/login application/json-patch+json 54
+2021-03-13 22:57:26.301 +07:00 [INF] CORS policy execution successful.
+2021-03-13 22:57:26.456 +07:00 [INF] Executing endpoint 'ViriyahAPI.Controllers.AccountController.Login (ViriyahAPI)'
+2021-03-13 22:57:26.744 +07:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ViriyahAPI.Models.LoginUserDTO) on controller ViriyahAPI.Controllers.AccountController (ViriyahAPI).
+2021-03-13 22:57:28.808 +07:00 [INF] Executing action method ViriyahAPI.Controllers.AccountController.Login (ViriyahAPI) - Validation state: "Valid"
+2021-03-13 22:57:28.825 +07:00 [INF] Login Attempt for taun@example.com 
+2021-03-13 22:57:30.625 +07:00 [INF] Entity Framework Core 5.0.4 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-03-13 22:57:34.559 +07:00 [INF] Executed DbCommand (173ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2021-03-13 22:57:34.765 +07:00 [WRN] Invalid password for user.
+2021-03-13 22:57:34.798 +07:00 [INF] Executed action method ViriyahAPI.Controllers.AccountController.Login (ViriyahAPI), returned result Microsoft.AspNetCore.Mvc.UnauthorizedResult in 5982.052ms.
+2021-03-13 22:57:34.805 +07:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2021-03-13 22:57:34.962 +07:00 [INF] Executed action ViriyahAPI.Controllers.AccountController.Login (ViriyahAPI) in 8212.4968ms
+2021-03-13 22:57:34.963 +07:00 [INF] Executed endpoint 'ViriyahAPI.Controllers.AccountController.Login (ViriyahAPI)'
+2021-03-13 22:57:34.972 +07:00 [INF] Request finished HTTP/2 POST https://localhost:44331/api/Account/login application/json-patch+json 54 - 401 162 application/problem+json;+charset=utf-8 8685.7482ms
+2021-03-13 22:58:15.290 +07:00 [INF] Request starting HTTP/2 POST https://localhost:44331/api/Account/login application/json-patch+json 54
+2021-03-13 22:58:15.290 +07:00 [INF] CORS policy execution successful.
+2021-03-13 22:58:15.303 +07:00 [INF] Executing endpoint 'ViriyahAPI.Controllers.AccountController.Login (ViriyahAPI)'
+2021-03-13 22:58:15.304 +07:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ViriyahAPI.Models.LoginUserDTO) on controller ViriyahAPI.Controllers.AccountController (ViriyahAPI).
+2021-03-13 22:58:15.385 +07:00 [INF] Executing action method ViriyahAPI.Controllers.AccountController.Login (ViriyahAPI) - Validation state: "Valid"
+2021-03-13 22:58:15.385 +07:00 [INF] Login Attempt for taun@example.com 
+2021-03-13 22:58:15.418 +07:00 [INF] Entity Framework Core 5.0.4 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-03-13 22:58:15.430 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2021-03-13 22:58:15.972 +07:00 [INF] Executed DbCommand (183ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2021-03-13 22:58:16.169 +07:00 [INF] Executed action method ViriyahAPI.Controllers.AccountController.Login (ViriyahAPI), returned result Microsoft.AspNetCore.Mvc.AcceptedResult in 783.9445ms.
+2021-03-13 22:58:16.169 +07:00 [INF] Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-03-13 22:58:16.173 +07:00 [INF] Executed action ViriyahAPI.Controllers.AccountController.Login (ViriyahAPI) in 869.4598ms
+2021-03-13 22:58:16.173 +07:00 [INF] Executed endpoint 'ViriyahAPI.Controllers.AccountController.Login (ViriyahAPI)'
+2021-03-13 22:58:16.174 +07:00 [INF] Request finished HTTP/2 POST https://localhost:44331/api/Account/login application/json-patch+json 54 - 202 356 application/json;+charset=utf-8 883.8188ms
+2021-03-13 23:04:33.903 +07:00 [INF] Application Is Starting
+2021-03-13 23:04:36.297 +07:00 [INF] User profile is available. Using 'C:\Users\Detectiveboy007\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-03-13 23:04:36.668 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-03-13 23:04:36.669 +07:00 [INF] Hosting environment: Development
+2021-03-13 23:04:36.669 +07:00 [INF] Content root path: D:\taun\Viriyah\Project\WebAPI\ViriyahAPI\ViriyahAPI
+2021-03-13 23:04:36.749 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - -
+2021-03-13 23:04:36.938 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - - - 200 - text/html;charset=utf-8 191.0792ms
+2021-03-13 23:04:37.015 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/swagger-ui.css - -
+2021-03-13 23:04:37.059 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-03-13 23:04:37.059 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/swagger-ui.css - - - 0 142933 text/css 43.9179ms
+2021-03-13 23:04:37.246 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/favicon-16x16.png - -
+2021-03-13 23:04:37.249 +07:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2021-03-13 23:04:37.249 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/favicon-16x16.png - - - 0 665 image/png 2.8243ms
+2021-03-13 23:04:37.291 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - -
+2021-03-13 23:04:37.462 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 170.6158ms
+2021-03-13 23:05:19.570 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/api/Hotel/1 - -
+2021-03-13 23:05:19.648 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2021-03-13 23:05:19.676 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-03-13 23:05:19.966 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/api/Hotel/1 - - - 500 - text/plain 396.8806ms
+2021-03-13 23:05:33.370 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/api/Hotel/1 - -
+2021-03-13 23:05:33.373 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2021-03-13 23:05:33.376 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-03-13 23:05:33.379 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/api/Hotel/1 - - - 500 - text/plain 7.1866ms
+2021-03-13 23:07:25.256 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:44331/api/Hotel/1 - -
+2021-03-13 23:07:25.260 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2021-03-13 23:07:25.301 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-03-13 23:07:25.304 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:44331/api/Hotel/1 - - - 500 - text/plain 47.5416ms
+2021-03-13 23:12:26.588 +07:00 [INF] Application Is Starting
+2021-03-13 23:12:28.733 +07:00 [INF] User profile is available. Using 'C:\Users\Detectiveboy007\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-03-13 23:12:29.144 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-03-13 23:12:29.144 +07:00 [INF] Hosting environment: Development
+2021-03-13 23:12:29.144 +07:00 [INF] Content root path: D:\taun\Viriyah\Project\WebAPI\ViriyahAPI\ViriyahAPI
+2021-03-13 23:12:29.228 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - -
+2021-03-13 23:12:29.431 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/swagger-ui.css - -
+2021-03-13 23:12:29.432 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - - - 200 - text/html;charset=utf-8 205.8150ms
+2021-03-13 23:12:29.592 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-03-13 23:12:29.592 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/swagger-ui.css - - - 0 142933 text/css 161.6459ms
+2021-03-13 23:12:29.620 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - -
+2021-03-13 23:12:29.765 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 145.6556ms
+2021-03-13 23:12:55.721 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:44331/api/Hotel/1 - -
+2021-03-13 23:12:55.810 +07:00 [INF] Executing endpoint 'ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI)'
+2021-03-13 23:12:55.927 +07:00 [INF] Route matched with {action = "GetHotel", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHotel(Int32) on controller ViriyahAPI.Controllers.HotelController (ViriyahAPI).
+2021-03-13 23:12:57.555 +07:00 [INF] Executing action method ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI) - Validation state: "Valid"
+2021-03-13 23:12:59.133 +07:00 [INF] Entity Framework Core 5.0.4 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-03-13 23:13:00.492 +07:00 [ERR] Something Went Wrong in the GetHotel
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Query.InvalidIncludePathError': Unable to find navigation 'Hotels' specified in string based include path 'Hotels'. This exception can be suppressed or logged by passing event ID 'CoreEventId.InvalidIncludePathError' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`2.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam1 arg1, TParam2 arg2)
+   at Microsoft.EntityFrameworkCore.Diagnostics.CoreLoggerExtensions.InvalidIncludePathError(IDiagnosticsLogger`1 diagnostics, String navigationChain, String navigationName)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.ProcessInclude(NavigationExpansionExpression source, Expression expression, Boolean thenInclude, Boolean setLoaded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.Expand(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, LambdaExpression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.FirstOrDefaultAsync[TSource](IQueryable`1 source, Expression`1 predicate, CancellationToken cancellationToken)
+   at ViriyahAPI.Repository.GenericRepository`1.Get(Expression`1 expression, List`1 includes) in D:\taun\Viriyah\Project\WebAPI\ViriyahAPI\ViriyahAPI\Repository\GenericRepository.cs:line 45
+   at ViriyahAPI.Controllers.HotelController.GetHotel(Int32 id) in D:\taun\Viriyah\Project\WebAPI\ViriyahAPI\ViriyahAPI\Controllers\HotelController.cs:line 57
+2021-03-13 23:13:00.762 +07:00 [INF] Executed action method ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3197.614ms.
+2021-03-13 23:13:00.769 +07:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-03-13 23:13:00.778 +07:00 [INF] Executed action ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI) in 4842.8824ms
+2021-03-13 23:13:00.778 +07:00 [INF] Executed endpoint 'ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI)'
+2021-03-13 23:13:00.788 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:44331/api/Hotel/1 - - - 500 - text/plain;+charset=utf-8 5067.3270ms
+2021-03-13 23:15:03.877 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:44331/api/Hotel/ - -
+2021-03-13 23:15:03.908 +07:00 [INF] Executing endpoint 'ViriyahAPI.Controllers.HotelController.GetHotels (ViriyahAPI)'
+2021-03-13 23:15:03.934 +07:00 [INF] Route matched with {action = "GetHotels", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHotels() on controller ViriyahAPI.Controllers.HotelController (ViriyahAPI).
+2021-03-13 23:15:04.057 +07:00 [INF] Executing action method ViriyahAPI.Controllers.HotelController.GetHotels (ViriyahAPI) - Validation state: "Valid"
+2021-03-13 23:15:04.113 +07:00 [INF] Entity Framework Core 5.0.4 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-03-13 23:15:06.693 +07:00 [INF] Executed DbCommand (344ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+2021-03-13 23:15:06.819 +07:00 [INF] Executed action method ViriyahAPI.Controllers.HotelController.GetHotels (ViriyahAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2761.9501ms.
+2021-03-13 23:15:06.823 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ViriyahAPI.Models.HotelDTO, ViriyahAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-03-13 23:15:07.228 +07:00 [INF] Executed action ViriyahAPI.Controllers.HotelController.GetHotels (ViriyahAPI) in 3293.4367ms
+2021-03-13 23:15:07.229 +07:00 [INF] Executed endpoint 'ViriyahAPI.Controllers.HotelController.GetHotels (ViriyahAPI)'
+2021-03-13 23:15:07.233 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:44331/api/Hotel/ - - - 200 296 application/json;+charset=utf-8 3356.1538ms
+2021-03-13 23:15:15.798 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:44331/api/Hotel/1 - -
+2021-03-13 23:15:15.799 +07:00 [INF] Executing endpoint 'ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI)'
+2021-03-13 23:15:15.799 +07:00 [INF] Route matched with {action = "GetHotel", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHotel(Int32) on controller ViriyahAPI.Controllers.HotelController (ViriyahAPI).
+2021-03-13 23:15:15.843 +07:00 [INF] Executing action method ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI) - Validation state: "Valid"
+2021-03-13 23:15:15.854 +07:00 [INF] Entity Framework Core 5.0.4 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-03-13 23:15:16.004 +07:00 [ERR] Something Went Wrong in the GetHotel
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Query.InvalidIncludePathError': Unable to find navigation 'Hotels' specified in string based include path 'Hotels'. This exception can be suppressed or logged by passing event ID 'CoreEventId.InvalidIncludePathError' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`2.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam1 arg1, TParam2 arg2)
+   at Microsoft.EntityFrameworkCore.Diagnostics.CoreLoggerExtensions.InvalidIncludePathError(IDiagnosticsLogger`1 diagnostics, String navigationChain, String navigationName)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.ProcessInclude(NavigationExpansionExpression source, Expression expression, Boolean thenInclude, Boolean setLoaded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.Expand(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, LambdaExpression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.FirstOrDefaultAsync[TSource](IQueryable`1 source, Expression`1 predicate, CancellationToken cancellationToken)
+   at ViriyahAPI.Repository.GenericRepository`1.Get(Expression`1 expression, List`1 includes) in D:\taun\Viriyah\Project\WebAPI\ViriyahAPI\ViriyahAPI\Repository\GenericRepository.cs:line 45
+   at ViriyahAPI.Controllers.HotelController.GetHotel(Int32 id) in D:\taun\Viriyah\Project\WebAPI\ViriyahAPI\ViriyahAPI\Controllers\HotelController.cs:line 57
+2021-03-13 23:15:16.005 +07:00 [INF] Executed action method ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 162.3065ms.
+2021-03-13 23:15:16.005 +07:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-03-13 23:15:16.006 +07:00 [INF] Executed action ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI) in 206.3223ms
+2021-03-13 23:15:16.006 +07:00 [INF] Executed endpoint 'ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI)'
+2021-03-13 23:15:16.017 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:44331/api/Hotel/1 - - - 500 - text/plain;+charset=utf-8 219.2257ms
+2021-03-13 23:17:03.197 +07:00 [INF] Application Is Starting
+2021-03-13 23:17:05.390 +07:00 [INF] User profile is available. Using 'C:\Users\Detectiveboy007\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-03-13 23:17:05.763 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-03-13 23:17:05.763 +07:00 [INF] Hosting environment: Development
+2021-03-13 23:17:05.763 +07:00 [INF] Content root path: D:\taun\Viriyah\Project\WebAPI\ViriyahAPI\ViriyahAPI
+2021-03-13 23:17:05.835 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - -
+2021-03-13 23:17:06.007 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - - - 200 - text/html;charset=utf-8 174.1748ms
+2021-03-13 23:17:06.082 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/swagger-ui.css - -
+2021-03-13 23:17:06.127 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-03-13 23:17:06.128 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/swagger-ui.css - - - 0 142933 text/css 45.6349ms
+2021-03-13 23:17:06.197 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/favicon-16x16.png - -
+2021-03-13 23:17:06.200 +07:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2021-03-13 23:17:06.200 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/favicon-16x16.png - - - 0 665 image/png 2.7181ms
+2021-03-13 23:17:06.237 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - -
+2021-03-13 23:17:06.403 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 165.9551ms
+2021-03-13 23:17:14.399 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:44331/api/Hotel/1 - -
+2021-03-13 23:17:14.473 +07:00 [INF] Executing endpoint 'ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI)'
+2021-03-13 23:17:14.520 +07:00 [INF] Route matched with {action = "GetHotel", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHotel(Int32) on controller ViriyahAPI.Controllers.HotelController (ViriyahAPI).
+2021-03-13 23:17:15.089 +07:00 [INF] Executing action method ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI) - Validation state: "Valid"
+2021-03-13 23:17:20.781 +07:00 [INF] Entity Framework Core 5.0.4 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-03-13 23:17:21.160 +07:00 [ERR] Something Went Wrong in the GetHotel
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Query.InvalidIncludePathError': Unable to find navigation 'Hotels' specified in string based include path 'Hotels'. This exception can be suppressed or logged by passing event ID 'CoreEventId.InvalidIncludePathError' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`2.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam1 arg1, TParam2 arg2)
+   at Microsoft.EntityFrameworkCore.Diagnostics.CoreLoggerExtensions.InvalidIncludePathError(IDiagnosticsLogger`1 diagnostics, String navigationChain, String navigationName)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.ProcessInclude(NavigationExpansionExpression source, Expression expression, Boolean thenInclude, Boolean setLoaded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.Expand(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, LambdaExpression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.FirstOrDefaultAsync[TSource](IQueryable`1 source, Expression`1 predicate, CancellationToken cancellationToken)
+   at ViriyahAPI.Repository.GenericRepository`1.Get(Expression`1 expression, List`1 includes) in D:\taun\Viriyah\Project\WebAPI\ViriyahAPI\ViriyahAPI\Repository\GenericRepository.cs:line 45
+   at ViriyahAPI.Controllers.HotelController.GetHotel(Int32 id) in D:\taun\Viriyah\Project\WebAPI\ViriyahAPI\ViriyahAPI\Controllers\HotelController.cs:line 57
+2021-03-13 23:17:21.262 +07:00 [INF] Executed action method ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 6165.8021ms.
+2021-03-13 23:17:21.267 +07:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-03-13 23:17:21.275 +07:00 [INF] Executed action ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI) in 6748.3594ms
+2021-03-13 23:17:21.275 +07:00 [INF] Executed endpoint 'ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI)'
+2021-03-13 23:17:21.281 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:44331/api/Hotel/1 - - - 500 - text/plain;+charset=utf-8 6882.0410ms
+2021-03-13 23:17:50.953 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:44331/api/Hotel/1 - -
+2021-03-13 23:17:50.968 +07:00 [INF] Executing endpoint 'ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI)'
+2021-03-13 23:17:50.968 +07:00 [INF] Route matched with {action = "GetHotel", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHotel(Int32) on controller ViriyahAPI.Controllers.HotelController (ViriyahAPI).
+2021-03-13 23:17:51.054 +07:00 [INF] Executing action method ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI) - Validation state: "Valid"
+2021-03-13 23:17:54.274 +07:00 [INF] Entity Framework Core 5.0.4 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-03-13 23:18:47.979 +07:00 [INF] Application Is Starting
+2021-03-13 23:18:50.691 +07:00 [INF] User profile is available. Using 'C:\Users\Detectiveboy007\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-03-13 23:18:51.057 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-03-13 23:18:51.057 +07:00 [INF] Hosting environment: Development
+2021-03-13 23:18:51.058 +07:00 [INF] Content root path: D:\taun\Viriyah\Project\WebAPI\ViriyahAPI\ViriyahAPI
+2021-03-13 23:18:51.134 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - -
+2021-03-13 23:18:51.312 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - - - 200 - text/html;charset=utf-8 180.6824ms
+2021-03-13 23:18:51.367 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/swagger-ui.css - -
+2021-03-13 23:18:51.413 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-03-13 23:18:51.414 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/swagger-ui.css - - - 0 142933 text/css 46.2805ms
+2021-03-13 23:18:51.518 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/favicon-16x16.png - -
+2021-03-13 23:18:51.547 +07:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2021-03-13 23:18:51.547 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/favicon-16x16.png - - - 0 665 image/png 29.1411ms
+2021-03-13 23:18:51.564 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - -
+2021-03-13 23:18:51.744 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 180.0290ms
+2021-03-13 23:19:13.518 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/api/Hotel/1 - -
+2021-03-13 23:19:13.595 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2021-03-13 23:19:13.603 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-03-13 23:19:13.706 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/api/Hotel/1 - - - 500 - text/plain 188.7444ms
+2021-03-13 23:19:26.485 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:44331/api/Hotel/1 - -
+2021-03-13 23:19:26.488 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2021-03-13 23:19:26.490 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-03-13 23:19:26.492 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:44331/api/Hotel/1 - - - 500 - text/plain 7.2824ms
+2021-03-13 23:19:42.344 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:44331/api/Hotel/ - -
+2021-03-13 23:19:42.345 +07:00 [INF] Executing endpoint 'ViriyahAPI.Controllers.HotelController.GetHotels (ViriyahAPI)'
+2021-03-13 23:19:42.401 +07:00 [INF] Route matched with {action = "GetHotels", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHotels() on controller ViriyahAPI.Controllers.HotelController (ViriyahAPI).
+2021-03-13 23:19:42.992 +07:00 [INF] Executing action method ViriyahAPI.Controllers.HotelController.GetHotels (ViriyahAPI) - Validation state: "Valid"
+2021-03-13 23:19:44.060 +07:00 [INF] Entity Framework Core 5.0.4 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-03-13 23:19:44.869 +07:00 [INF] Executed DbCommand (49ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+2021-03-13 23:19:44.973 +07:00 [INF] Executed action method ViriyahAPI.Controllers.HotelController.GetHotels (ViriyahAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1973.1585ms.
+2021-03-13 23:19:44.981 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ViriyahAPI.Models.HotelDTO, ViriyahAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-03-13 23:19:45.207 +07:00 [INF] Executed action ViriyahAPI.Controllers.HotelController.GetHotels (ViriyahAPI) in 2799.0532ms
+2021-03-13 23:19:45.208 +07:00 [INF] Executed endpoint 'ViriyahAPI.Controllers.HotelController.GetHotels (ViriyahAPI)'
+2021-03-13 23:19:45.217 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:44331/api/Hotel/ - - - 200 296 application/json;+charset=utf-8 2873.7288ms
+2021-03-13 23:19:55.424 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:44331/api/Hotel/2 - -
+2021-03-13 23:19:55.425 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2021-03-13 23:19:55.433 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-03-13 23:19:55.436 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:44331/api/Hotel/2 - - - 500 - text/plain 11.5415ms
+2021-03-13 23:20:24.091 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:44331/api/Hotel/2 - -
+2021-03-13 23:20:24.091 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2021-03-13 23:20:24.109 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-03-13 23:20:24.111 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:44331/api/Hotel/2 - - - 500 - text/plain 20.0063ms
+2021-03-13 23:22:17.669 +07:00 [INF] Application Is Starting
+2021-03-13 23:22:20.298 +07:00 [INF] User profile is available. Using 'C:\Users\Detectiveboy007\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-03-13 23:22:20.662 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-03-13 23:22:20.663 +07:00 [INF] Hosting environment: Development
+2021-03-13 23:22:20.663 +07:00 [INF] Content root path: D:\taun\Viriyah\Project\WebAPI\ViriyahAPI\ViriyahAPI
+2021-03-13 23:22:20.738 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - -
+2021-03-13 23:22:20.915 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - - - 200 - text/html;charset=utf-8 179.1559ms
+2021-03-13 23:22:20.968 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/swagger-ui.css - -
+2021-03-13 23:22:21.117 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-03-13 23:22:21.117 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/swagger-ui.css - - - 0 142933 text/css 149.6492ms
+2021-03-13 23:22:21.276 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/favicon-16x16.png - -
+2021-03-13 23:22:21.278 +07:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2021-03-13 23:22:21.278 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/favicon-16x16.png - - - 0 665 image/png 2.6645ms
+2021-03-13 23:22:21.317 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - -
+2021-03-13 23:22:21.488 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 170.7607ms
+2021-03-13 23:22:29.310 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:44331/api/Hotel/2 - -
+2021-03-13 23:22:29.355 +07:00 [INF] Executing endpoint 'ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI)'
+2021-03-13 23:22:29.419 +07:00 [INF] Route matched with {action = "GetHotel", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHotel(Int32) on controller ViriyahAPI.Controllers.HotelController (ViriyahAPI).
+2021-03-13 23:22:29.975 +07:00 [INF] Executing action method ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI) - Validation state: "Valid"
+2021-03-13 23:22:36.349 +07:00 [INF] Entity Framework Core 5.0.4 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-03-13 23:22:37.538 +07:00 [INF] Executed DbCommand (192ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating], [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Hotels] AS [h]
+INNER JOIN [Countries] AS [c] ON [h].[CountryId] = [c].[Id]
+WHERE [h].[Id] = @__id_0
+2021-03-13 23:22:40.006 +07:00 [ERR] Something Went Wrong in the GetHotel
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> CountryDTO
+System.Object -> ViriyahAPI.Models.CountryDTO
+   at lambda_method62(Closure , Object , CountryDTO , ResolutionContext )
+   at ViriyahAPI.Controllers.HotelController.GetHotel(Int32 id) in D:\taun\Viriyah\Project\WebAPI\ViriyahAPI\ViriyahAPI\Controllers\HotelController.cs:line 58
+2021-03-13 23:22:43.693 +07:00 [INF] Executed action method ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 13708.2317ms.
+2021-03-13 23:22:43.701 +07:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-03-13 23:22:43.709 +07:00 [INF] Executed action ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI) in 14284.1673ms
+2021-03-13 23:22:43.709 +07:00 [INF] Executed endpoint 'ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI)'
+2021-03-13 23:22:43.715 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:44331/api/Hotel/2 - - - 500 - text/plain;+charset=utf-8 14405.0101ms
+2021-03-13 23:23:00.719 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:44331/api/Hotel/2 - -
+2021-03-13 23:23:00.733 +07:00 [INF] Executing endpoint 'ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI)'
+2021-03-13 23:23:00.734 +07:00 [INF] Route matched with {action = "GetHotel", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHotel(Int32) on controller ViriyahAPI.Controllers.HotelController (ViriyahAPI).
+2021-03-13 23:23:00.769 +07:00 [INF] Executing action method ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI) - Validation state: "Valid"
+2021-03-13 23:23:50.950 +07:00 [INF] Application Is Starting
+2021-03-13 23:23:53.603 +07:00 [INF] User profile is available. Using 'C:\Users\Detectiveboy007\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-03-13 23:23:54.090 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-03-13 23:23:54.091 +07:00 [INF] Hosting environment: Development
+2021-03-13 23:23:54.091 +07:00 [INF] Content root path: D:\taun\Viriyah\Project\WebAPI\ViriyahAPI\ViriyahAPI
+2021-03-13 23:23:54.195 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - -
+2021-03-13 23:23:54.396 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - - - 200 - text/html;charset=utf-8 203.6414ms
+2021-03-13 23:23:54.449 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/swagger-ui.css - -
+2021-03-13 23:23:54.527 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-03-13 23:23:54.528 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/swagger-ui.css - - - 0 142933 text/css 78.9537ms
+2021-03-13 23:23:54.586 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/favicon-16x16.png - -
+2021-03-13 23:23:54.588 +07:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2021-03-13 23:23:54.588 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/favicon-16x16.png - - - 0 665 image/png 2.0333ms
+2021-03-13 23:23:54.628 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - -
+2021-03-13 23:23:54.842 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 213.4863ms
+2021-03-13 23:24:07.779 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/api/Country/1 - -
+2021-03-13 23:24:07.840 +07:00 [INF] Executing endpoint 'ViriyahAPI.Controllers.CountryController.GetCountry (ViriyahAPI)'
+2021-03-13 23:24:07.885 +07:00 [INF] Route matched with {action = "GetCountry", controller = "Country"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCountry(Int32) on controller ViriyahAPI.Controllers.CountryController (ViriyahAPI).
+2021-03-13 23:24:08.516 +07:00 [INF] Executing action method ViriyahAPI.Controllers.CountryController.GetCountry (ViriyahAPI) - Validation state: "Valid"
+2021-03-13 23:24:09.624 +07:00 [INF] Entity Framework Core 5.0.4 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-03-13 23:24:10.742 +07:00 [INF] Executed DbCommand (123ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name], [t].[ShortName], [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM (
+    SELECT TOP(1) [c].[Id], [c].[Name], [c].[ShortName]
+    FROM [Countries] AS [c]
+    WHERE [c].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [Hotels] AS [h] ON [t].[Id] = [h].[CountryId]
+ORDER BY [t].[Id], [h].[Id]
+2021-03-13 23:24:10.863 +07:00 [INF] Executed action method ViriyahAPI.Controllers.CountryController.GetCountry (ViriyahAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2337.8596ms.
+2021-03-13 23:24:10.870 +07:00 [INF] Executing OkObjectResult, writing value of type 'ViriyahAPI.Models.CountryDTO'.
+2021-03-13 23:24:11.088 +07:00 [INF] Executed action ViriyahAPI.Controllers.CountryController.GetCountry (ViriyahAPI) in 3194.5366ms
+2021-03-13 23:24:11.089 +07:00 [INF] Executed endpoint 'ViriyahAPI.Controllers.CountryController.GetCountry (ViriyahAPI)'
+2021-03-13 23:24:11.098 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/api/Country/1 - - - 200 140 application/json;+charset=utf-8 3320.1220ms
+2021-03-13 23:26:15.034 +07:00 [INF] Application Is Starting
+2021-03-13 23:26:17.524 +07:00 [INF] User profile is available. Using 'C:\Users\Detectiveboy007\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-03-13 23:26:17.955 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-03-13 23:26:17.955 +07:00 [INF] Hosting environment: Development
+2021-03-13 23:26:17.955 +07:00 [INF] Content root path: D:\taun\Viriyah\Project\WebAPI\ViriyahAPI\ViriyahAPI
+2021-03-13 23:26:18.047 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - -
+2021-03-13 23:26:18.247 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - - - 200 - text/html;charset=utf-8 201.7430ms
+2021-03-13 23:26:18.292 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/swagger-ui.css - -
+2021-03-13 23:26:18.331 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-03-13 23:26:18.331 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/swagger-ui.css - - - 0 142933 text/css 39.6769ms
+2021-03-13 23:26:18.422 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/favicon-16x16.png - -
+2021-03-13 23:26:18.425 +07:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2021-03-13 23:26:18.425 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/favicon-16x16.png - - - 0 665 image/png 2.4927ms
+2021-03-13 23:26:18.466 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - -
+2021-03-13 23:26:18.657 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 190.8594ms
+2021-03-13 23:27:42.686 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:44331/api/Hotel/2 - -
+2021-03-13 23:27:42.759 +07:00 [INF] Executing endpoint 'ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI)'
+2021-03-13 23:27:42.823 +07:00 [INF] Route matched with {action = "GetHotel", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHotel(Int32) on controller ViriyahAPI.Controllers.HotelController (ViriyahAPI).
+2021-03-13 23:27:43.369 +07:00 [INF] Executing action method ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI) - Validation state: "Valid"
+2021-03-13 23:27:44.390 +07:00 [INF] Entity Framework Core 5.0.4 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-03-13 23:27:45.347 +07:00 [INF] Executed DbCommand (58ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating], [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Hotels] AS [h]
+INNER JOIN [Countries] AS [c] ON [h].[CountryId] = [c].[Id]
+WHERE [h].[Id] = @__id_0
+2021-03-13 23:27:45.448 +07:00 [INF] Executed action method ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2068.489ms.
+2021-03-13 23:27:45.457 +07:00 [INF] Executing OkObjectResult, writing value of type 'ViriyahAPI.Models.HotelDTO'.
+2021-03-13 23:27:45.672 +07:00 [INF] Executed action ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI) in 2843.0226ms
+2021-03-13 23:27:45.673 +07:00 [INF] Executed endpoint 'ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI)'
+2021-03-13 23:27:45.682 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:44331/api/Hotel/2 - - - 200 154 application/json;+charset=utf-8 2998.0887ms
+2021-03-13 23:28:07.247 +07:00 [INF] Application Is Starting
+2021-03-13 23:28:09.658 +07:00 [INF] User profile is available. Using 'C:\Users\Detectiveboy007\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-03-13 23:28:10.049 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-03-13 23:28:10.049 +07:00 [INF] Hosting environment: Development
+2021-03-13 23:28:10.049 +07:00 [INF] Content root path: D:\taun\Viriyah\Project\WebAPI\ViriyahAPI\ViriyahAPI
+2021-03-13 23:28:10.126 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - -
+2021-03-13 23:28:10.331 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - - - 200 - text/html;charset=utf-8 208.0833ms
+2021-03-13 23:28:10.379 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/swagger-ui.css - -
+2021-03-13 23:28:10.435 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-03-13 23:28:10.435 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/swagger-ui.css - - - 0 142933 text/css 55.8111ms
+2021-03-13 23:28:10.496 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/favicon-16x16.png - -
+2021-03-13 23:28:10.498 +07:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2021-03-13 23:28:10.498 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/favicon-16x16.png - - - 0 665 image/png 2.1153ms
+2021-03-13 23:28:10.534 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - -
+2021-03-13 23:28:10.720 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 186.8963ms
+2021-03-13 23:28:21.820 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:44331/api/Hotel/2 - -
+2021-03-13 23:28:21.882 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2021-03-13 23:28:21.888 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-03-13 23:28:21.952 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:44331/api/Hotel/2 - - - 500 - text/plain 145.2864ms
+2021-03-13 23:28:47.560 +07:00 [INF] Application Is Starting
+2021-03-13 23:28:51.065 +07:00 [INF] User profile is available. Using 'C:\Users\Detectiveboy007\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-03-13 23:28:51.597 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-03-13 23:28:51.598 +07:00 [INF] Hosting environment: Development
+2021-03-13 23:28:51.598 +07:00 [INF] Content root path: D:\taun\Viriyah\Project\WebAPI\ViriyahAPI\ViriyahAPI
+2021-03-13 23:28:51.743 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - -
+2021-03-13 23:28:51.743 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:44331/api/Hotel/2 - -
+2021-03-13 23:28:51.885 +07:00 [INF] Executing endpoint 'ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI)'
+2021-03-13 23:28:51.964 +07:00 [INF] Route matched with {action = "GetHotel", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHotel(Int32) on controller ViriyahAPI.Controllers.HotelController (ViriyahAPI).
+2021-03-13 23:28:52.030 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - - - 200 - text/html;charset=utf-8 281.7236ms
+2021-03-13 23:28:52.082 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/swagger-ui.css - -
+2021-03-13 23:28:52.149 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-03-13 23:28:52.149 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/swagger-ui.css - - - 0 142933 text/css 66.8547ms
+2021-03-13 23:28:52.216 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/favicon-16x16.png - -
+2021-03-13 23:28:52.218 +07:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2021-03-13 23:28:52.218 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/favicon-16x16.png - - - 0 665 image/png 1.5494ms
+2021-03-13 23:28:52.281 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - -
+2021-03-13 23:28:52.490 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 208.5472ms
+2021-03-13 23:28:52.864 +07:00 [INF] Executing action method ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI) - Validation state: "Valid"
+2021-03-13 23:28:54.008 +07:00 [INF] Entity Framework Core 5.0.4 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-03-13 23:28:55.001 +07:00 [INF] Executed DbCommand (65ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating], [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Hotels] AS [h]
+INNER JOIN [Countries] AS [c] ON [h].[CountryId] = [c].[Id]
+WHERE [h].[Id] = @__id_0
+2021-03-13 23:28:55.089 +07:00 [INF] Executed action method ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2216.7617ms.
+2021-03-13 23:28:55.096 +07:00 [INF] Executing OkObjectResult, writing value of type 'ViriyahAPI.Models.HotelDTO'.
+2021-03-13 23:28:55.302 +07:00 [INF] Executed action ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI) in 3332.6671ms
+2021-03-13 23:28:55.303 +07:00 [INF] Executed endpoint 'ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI)'
+2021-03-13 23:28:55.312 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:44331/api/Hotel/2 - - - 200 154 application/json;+charset=utf-8 3575.3386ms
+2021-03-13 23:28:56.820 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:44331/api/Hotel/2 - -
+2021-03-13 23:28:56.827 +07:00 [INF] Executing endpoint 'ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI)'
+2021-03-13 23:28:56.827 +07:00 [INF] Route matched with {action = "GetHotel", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHotel(Int32) on controller ViriyahAPI.Controllers.HotelController (ViriyahAPI).
+2021-03-13 23:28:56.867 +07:00 [INF] Executing action method ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI) - Validation state: "Valid"
+2021-03-13 23:28:56.917 +07:00 [INF] Entity Framework Core 5.0.4 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-03-13 23:28:56.936 +07:00 [INF] Executed DbCommand (10ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating], [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Hotels] AS [h]
+INNER JOIN [Countries] AS [c] ON [h].[CountryId] = [c].[Id]
+WHERE [h].[Id] = @__id_0
+2021-03-13 23:28:56.937 +07:00 [INF] Executed action method ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 69.5659ms.
+2021-03-13 23:28:56.937 +07:00 [INF] Executing OkObjectResult, writing value of type 'ViriyahAPI.Models.HotelDTO'.
+2021-03-13 23:28:56.939 +07:00 [INF] Executed action ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI) in 111.0815ms
+2021-03-13 23:28:56.939 +07:00 [INF] Executed endpoint 'ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI)'
+2021-03-13 23:28:56.940 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:44331/api/Hotel/2 - - - 200 154 application/json;+charset=utf-8 120.3799ms
+2021-03-13 23:29:02.906 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:44331/api/Hotel/1 - -
+2021-03-13 23:29:02.907 +07:00 [INF] Executing endpoint 'ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI)'
+2021-03-13 23:29:02.907 +07:00 [INF] Route matched with {action = "GetHotel", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHotel(Int32) on controller ViriyahAPI.Controllers.HotelController (ViriyahAPI).
+2021-03-13 23:29:02.943 +07:00 [INF] Executing action method ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI) - Validation state: "Valid"
+2021-03-13 23:29:02.955 +07:00 [INF] Entity Framework Core 5.0.4 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-03-13 23:29:02.963 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating], [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Hotels] AS [h]
+INNER JOIN [Countries] AS [c] ON [h].[CountryId] = [c].[Id]
+WHERE [h].[Id] = @__id_0
+2021-03-13 23:29:02.963 +07:00 [INF] Executed action method ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 19.8071ms.
+2021-03-13 23:29:02.964 +07:00 [INF] Executing OkObjectResult, writing value of type 'ViriyahAPI.Models.HotelDTO'.
+2021-03-13 23:29:02.964 +07:00 [INF] Executed action ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI) in 56.6612ms
+2021-03-13 23:29:02.964 +07:00 [INF] Executed endpoint 'ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI)'
+2021-03-13 23:29:02.964 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:44331/api/Hotel/1 - - - 200 151 application/json;+charset=utf-8 58.0172ms
+2021-03-13 23:29:39.196 +07:00 [INF] Application Is Starting
+2021-03-13 23:29:41.629 +07:00 [INF] User profile is available. Using 'C:\Users\Detectiveboy007\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-03-13 23:29:42.014 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-03-13 23:29:42.014 +07:00 [INF] Hosting environment: Development
+2021-03-13 23:29:42.014 +07:00 [INF] Content root path: D:\taun\Viriyah\Project\WebAPI\ViriyahAPI\ViriyahAPI
+2021-03-13 23:29:42.100 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - -
+2021-03-13 23:29:42.303 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - - - 200 - text/html;charset=utf-8 204.1908ms
+2021-03-13 23:29:42.361 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/swagger-ui.css - -
+2021-03-13 23:29:42.425 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-03-13 23:29:42.425 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/swagger-ui.css - - - 0 142933 text/css 64.8521ms
+2021-03-13 23:29:42.540 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/favicon-16x16.png - -
+2021-03-13 23:29:42.544 +07:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2021-03-13 23:29:42.544 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/favicon-16x16.png - - - 0 665 image/png 6.8400ms
+2021-03-13 23:29:42.724 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - -
+2021-03-13 23:29:42.906 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 180.1128ms
+2021-03-13 23:29:50.660 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:44331/api/Hotel/1 - -
+2021-03-13 23:29:50.714 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2021-03-13 23:29:50.723 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-03-13 23:29:50.778 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:44331/api/Hotel/1 - - - 500 - text/plain 118.7380ms
+2021-03-13 23:32:07.121 +07:00 [INF] Application Is Starting
+2021-03-13 23:32:09.537 +07:00 [INF] User profile is available. Using 'C:\Users\Detectiveboy007\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-03-13 23:32:10.298 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-03-13 23:32:10.298 +07:00 [INF] Hosting environment: Development
+2021-03-13 23:32:10.299 +07:00 [INF] Content root path: D:\taun\Viriyah\Project\WebAPI\ViriyahAPI\ViriyahAPI
+2021-03-13 23:32:10.376 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - -
+2021-03-13 23:32:10.562 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - - - 200 - text/html;charset=utf-8 189.0894ms
+2021-03-13 23:32:10.591 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/swagger-ui.css - -
+2021-03-13 23:32:10.627 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-03-13 23:32:10.628 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/swagger-ui.css - - - 0 142933 text/css 36.4610ms
+2021-03-13 23:32:11.225 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/favicon-16x16.png - -
+2021-03-13 23:32:11.228 +07:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2021-03-13 23:32:11.228 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/favicon-16x16.png - - - 0 665 image/png 2.6311ms
+2021-03-13 23:32:11.464 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - -
+2021-03-13 23:32:11.613 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 149.3101ms
+2021-03-13 23:32:57.946 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:44331/api/Hotel/1 - -
+2021-03-13 23:32:58.017 +07:00 [INF] No cached response available for this request.
+2021-03-13 23:32:58.126 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2021-03-13 23:32:58.131 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-03-13 23:32:58.232 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:44331/api/Hotel/1 - - - 500 - text/plain 285.7555ms
+2021-03-13 23:33:01.867 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:44331/api/Hotel/1 - -
+2021-03-13 23:33:01.867 +07:00 [INF] No cached response available for this request.
+2021-03-13 23:33:01.871 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2021-03-13 23:33:01.890 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-03-13 23:33:01.894 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:44331/api/Hotel/1 - - - 500 - text/plain 27.1828ms
+2021-03-13 23:33:03.169 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:44331/api/Hotel/1 - -
+2021-03-13 23:33:03.179 +07:00 [INF] No cached response available for this request.
+2021-03-13 23:33:03.181 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2021-03-13 23:33:03.183 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-03-13 23:33:03.261 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:44331/api/Hotel/1 - - - 500 - text/plain 91.9417ms
+2021-03-13 23:33:20.124 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:44331/api/Hotel/ - -
+2021-03-13 23:33:20.125 +07:00 [INF] No cached response available for this request.
+2021-03-13 23:33:20.126 +07:00 [INF] Executing endpoint 'ViriyahAPI.Controllers.HotelController.GetHotels (ViriyahAPI)'
+2021-03-13 23:33:20.172 +07:00 [INF] Route matched with {action = "GetHotels", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHotels() on controller ViriyahAPI.Controllers.HotelController (ViriyahAPI).
+2021-03-13 23:33:20.779 +07:00 [INF] Executing action method ViriyahAPI.Controllers.HotelController.GetHotels (ViriyahAPI) - Validation state: "Valid"
+2021-03-13 23:33:21.764 +07:00 [INF] Entity Framework Core 5.0.4 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-03-13 23:33:22.596 +07:00 [INF] Executed DbCommand (58ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+2021-03-13 23:33:22.689 +07:00 [INF] Executed action method ViriyahAPI.Controllers.HotelController.GetHotels (ViriyahAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1901.4403ms.
+2021-03-13 23:33:22.697 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ViriyahAPI.Models.HotelDTO, ViriyahAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-03-13 23:33:22.906 +07:00 [INF] Executed action ViriyahAPI.Controllers.HotelController.GetHotels (ViriyahAPI) in 2727.4501ms
+2021-03-13 23:33:22.907 +07:00 [INF] Executed endpoint 'ViriyahAPI.Controllers.HotelController.GetHotels (ViriyahAPI)'
+2021-03-13 23:33:22.908 +07:00 [INF] The response could not be cached for this request.
+2021-03-13 23:33:22.914 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:44331/api/Hotel/ - - - 200 296 application/json;+charset=utf-8 2789.8093ms
+2021-03-13 23:33:27.859 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:44331/api/Hotel/1 - -
+2021-03-13 23:33:27.860 +07:00 [INF] No cached response available for this request.
+2021-03-13 23:33:27.860 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2021-03-13 23:33:27.865 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-03-13 23:33:27.872 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:44331/api/Hotel/1 - - - 500 - text/plain 12.4282ms
+2021-03-13 23:44:34.668 +07:00 [INF] Application Is Starting
+2021-03-13 23:44:37.269 +07:00 [INF] User profile is available. Using 'C:\Users\Detectiveboy007\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-03-13 23:44:37.660 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-03-13 23:44:37.660 +07:00 [INF] Hosting environment: Development
+2021-03-13 23:44:37.660 +07:00 [INF] Content root path: D:\taun\Viriyah\Project\WebAPI\ViriyahAPI\ViriyahAPI
+2021-03-13 23:44:37.739 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - -
+2021-03-13 23:44:37.897 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - - - 200 - text/html;charset=utf-8 159.7947ms
+2021-03-13 23:44:37.933 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/swagger-ui.css - -
+2021-03-13 23:44:37.980 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-03-13 23:44:37.980 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/swagger-ui.css - - - 0 142933 text/css 46.5984ms
+2021-03-13 23:44:38.050 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/favicon-16x16.png - -
+2021-03-13 23:44:38.053 +07:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2021-03-13 23:44:38.053 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/favicon-16x16.png - - - 0 665 image/png 3.2416ms
+2021-03-13 23:44:38.095 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - -
+2021-03-13 23:44:38.253 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 157.4292ms
+2021-03-13 23:44:57.156 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:44331/api/Hotel/1 - -
+2021-03-13 23:44:57.187 +07:00 [INF] No cached response available for this request.
+2021-03-13 23:44:57.763 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2021-03-13 23:44:57.769 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2021-03-13 23:44:57.775 +07:00 [INF] The response could not be cached for this request.
+2021-03-13 23:44:57.778 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:44331/api/Hotel/1 - - - 401 - - 621.5695ms
+2021-03-13 23:46:07.382 +07:00 [INF] Request starting HTTP/2 POST https://localhost:44331/api/Account/login application/json-patch+json 54
+2021-03-13 23:46:07.415 +07:00 [INF] CORS policy execution successful.
+2021-03-13 23:46:07.455 +07:00 [INF] Executing endpoint 'ViriyahAPI.Controllers.AccountController.Login (ViriyahAPI)'
+2021-03-13 23:46:07.520 +07:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ViriyahAPI.Models.LoginUserDTO) on controller ViriyahAPI.Controllers.AccountController (ViriyahAPI).
+2021-03-13 23:46:08.586 +07:00 [INF] Executing action method ViriyahAPI.Controllers.AccountController.Login (ViriyahAPI) - Validation state: "Valid"
+2021-03-13 23:46:08.608 +07:00 [INF] Login Attempt for taun@example.com 
+2021-03-13 23:46:09.885 +07:00 [INF] Entity Framework Core 5.0.4 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-03-13 23:46:10.858 +07:00 [INF] Executed DbCommand (90ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2021-03-13 23:46:11.195 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2021-03-13 23:46:11.501 +07:00 [INF] Executed action method ViriyahAPI.Controllers.AccountController.Login (ViriyahAPI), returned result Microsoft.AspNetCore.Mvc.AcceptedResult in 2903.7359ms.
+2021-03-13 23:46:11.508 +07:00 [INF] Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-03-13 23:46:11.607 +07:00 [INF] Executed action ViriyahAPI.Controllers.AccountController.Login (ViriyahAPI) in 4078.9467ms
+2021-03-13 23:46:11.608 +07:00 [INF] Executed endpoint 'ViriyahAPI.Controllers.AccountController.Login (ViriyahAPI)'
+2021-03-13 23:46:11.622 +07:00 [INF] Request finished HTTP/2 POST https://localhost:44331/api/Account/login application/json-patch+json 54 - 202 356 application/json;+charset=utf-8 4241.0347ms
+2021-03-13 23:46:44.781 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:44331/api/Hotel/1 - -
+2021-03-13 23:46:45.011 +07:00 [INF] Successfully validated the token.
+2021-03-13 23:46:45.024 +07:00 [INF] Authorization was successful.
+2021-03-13 23:46:45.025 +07:00 [INF] Executing endpoint 'ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI)'
+2021-03-13 23:46:45.046 +07:00 [INF] Route matched with {action = "GetHotel", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHotel(Int32) on controller ViriyahAPI.Controllers.HotelController (ViriyahAPI).
+2021-03-13 23:46:45.081 +07:00 [INF] Executing action method ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI) - Validation state: "Valid"
+2021-03-13 23:46:45.115 +07:00 [INF] Entity Framework Core 5.0.4 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-03-13 23:46:45.172 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating], [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Hotels] AS [h]
+INNER JOIN [Countries] AS [c] ON [h].[CountryId] = [c].[Id]
+WHERE [h].[Id] = @__id_0
+2021-03-13 23:46:45.210 +07:00 [INF] Executed action method ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 129.0112ms.
+2021-03-13 23:46:45.211 +07:00 [INF] Executing OkObjectResult, writing value of type 'ViriyahAPI.Models.HotelDTO'.
+2021-03-13 23:46:45.235 +07:00 [INF] Executed action ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI) in 189.0158ms
+2021-03-13 23:46:45.235 +07:00 [INF] Executed endpoint 'ViriyahAPI.Controllers.HotelController.GetHotel (ViriyahAPI)'
+2021-03-13 23:46:45.237 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:44331/api/Hotel/1 - - - 200 151 application/json;+charset=utf-8 455.7813ms

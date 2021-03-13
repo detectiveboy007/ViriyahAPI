@@ -16,6 +16,7 @@ using ViriyahAPI.Configurations;
 using ViriyahAPI.Data;
 using ViriyahAPI.IRepository;
 using ViriyahAPI.Repository;
+using ViriyahAPI.Services;
 
 namespace ViriyahAPI
 {
@@ -38,6 +39,11 @@ namespace ViriyahAPI
                 options.UseSqlServer(Configuration.GetConnectionString("sqlConnection"))
             );
 
+
+            services.AddAuthentication();
+            services.ConfigureIdentity();
+            services.ConfigureJWT(Configuration);
+
             services.AddCors(o => {
                 o.AddPolicy("AllowAll", builder =>
                     builder.AllowAnyOrigin()
@@ -47,6 +53,7 @@ namespace ViriyahAPI
 
             services.AddAutoMapper(typeof(MapperInitilizer));
             services.AddTransient<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IAuthManager, AuthManager>();
 
             services.AddSwaggerGen(c =>
             {
@@ -85,8 +92,13 @@ namespace ViriyahAPI
 
             app.UseCors("AllowAll");
 
+            app.UseResponseCaching();
+            //app.UseHttpCacheHeaders();
+            //app.UseIpRateLimiting();
+
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
